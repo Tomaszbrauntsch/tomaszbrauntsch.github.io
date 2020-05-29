@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
   <link rel="stylesheet" href="./CSS/final.css">
@@ -5,38 +6,73 @@
   <script>
   $(document).ready(function() {
     $(function(){
+    var pics = [
+      "photos/pet.jpg", //this allows the ability to do the zooming in effect
+      "photos/pet.jpg",
+      "photos/document.jpg",
+      "photos/family_gathering.jpg",
+      "photos/wedding.jpg",
+      "photos/graduation.jpg",
+      "photos/child.jpg",
+      "photos/baby.png"
+    ];
     var words = [
     'With a simple click',
     'this computer that you log into everyday',
-    'that you use to file your taxes with,',
-    'that is filled with your photos of',
-    'your children',
-    'your pets',
+    'that contains your personal documents,',
+    'that is filled with photos of',
     'your memories',
+    'your greatest accomplishments',
     'is all',
     'Gone...'
   ], i = 0; // i for counting
 
     currInt = setInterval(function(){
     $('#headerText').fadeOut(function(){ //fadeout text
-      if (i > 8){
+      $('#myMemory').fadeIn();
+      $('#myMemory').attr("src", pics[i]);
+      if (i == 7){
+        $("img").css('width', '50%');
+      }
+      else if (i == 0){
+        $('#myMemory').css('display', 'none');
+      }
+      else{
+        $("img").css('width', '75%');
+      }
+      if (i > 7){
         clearInterval(currInt);
+        $('#myMemory').css('display', 'none');
         $('#facts').css('opacity', '1');
       }
       else{
+
         $(this).html(words[i]).fadeIn(); //update, count and fadeIn
       }
       i++;
+      $('#myMemory').fadeOut(3000);
     });
-  }, 2250);//2s
+
+  }, 4000);//2s
+});
+$('#body').load(function(){
+
 });
 });
   </script>
   </head>
-  <body>
+  <body id="body">
+    <audio src="./audio/sadmusic.mp3" autoplay loop>
+    </audio>
     <div id="headerContainer">
       <h1 id="headerText"></h1>
+
+      <!-- Photo Fade-->
+      <div id="memoryContainer">
+        <img id="myMemory" src="">
+      </div>
     </div>
+
     <div id="facts">
       <ul>
         <li>There is a malicious attack every 39 seconds
@@ -56,7 +92,6 @@
         <a href="https://www.bestbuy.com/site/geek-squad/geek-squad-data-recovery/pcmcat748300502324.c?id=pcmcat748300502324">Prices from bestbuy on data recovery</a>
       </p>
     <p style="margin-left:20%;margin-right:20%;"> The premise of this experience, is to give an example of how simple, one click of human error, can mentally shatter one's life in an instant.
-
   </p>
       <!-- <h1 id="fact1"></h1>
       <h1 id="fact2"></h1> -->

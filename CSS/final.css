@@ -2,6 +2,7 @@ body{
   margin:0;
   background-color:black;
   text-align: center;
+  overflow-y: hidden;
 }
 
 #headerContainer{
@@ -9,7 +10,33 @@ body{
 
   background-color: black;
   color:white;
-  font-size:1.5em;
+  font-size:2.5em;
+}
+#memoryContainer{
+  position: relative;
+  max-width: 1000px;
+  margin:auto;
+
+  text-align: center;
+}
+
+#myMemory{
+  animation-name:shrinkme;
+  animation-duration: 3.75s;
+  animation-play-state: infinite;
+}
+
+@keyframes shrinkme{
+  0%{
+    transform: scale(1.0);
+  }
+  100%{
+    transform: scale(0.5);
+  }
+}
+
+img{
+  width:80%;
 }
 #facts{
   margin-left: 20%;
