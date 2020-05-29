@@ -1,0 +1,43 @@
+body{
+  margin:0;
+  background-color:black;
+  text-align: center;
+}
+
+#headerContainer{
+  padding: 1.5em;
+
+  background-color: black;
+  color:white;
+  font-size:1.5em;
+}
+#facts{
+  margin-left: 20%;
+  margin-right:20%;
+  opacity:0;
+  text-decoration: none;
+  color:white;
+  font-size: 1.5em;
+}
+
+#fact1{
+  opacity:1;
+}
+#fact2{
+  opacity:1;
+}
+#source a{
+  text-decoration: none;
+  color:white;
+
+}
+
+#source a:link{
+  color:white;
+}
+#source a:visited{
+  color:white;
+}
+#source a:hover{
+  color:blue;
+}

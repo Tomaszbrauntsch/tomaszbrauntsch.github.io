@@ -1,0 +1,65 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="./CSS/final.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $(function(){
+    var words = [
+    'With a simple click',
+    'this computer that you log into everyday',
+    'that you use to file your taxes with,',
+    'that is filled with your photos of',
+    'your children',
+    'your pets',
+    'your memories',
+    'is all',
+    'Gone...'
+  ], i = 0; // i for counting
+
+    currInt = setInterval(function(){
+    $('#headerText').fadeOut(function(){ //fadeout text
+      if (i > 8){
+        clearInterval(currInt);
+        $('#facts').css('opacity', '1');
+      }
+      else{
+        $(this).html(words[i]).fadeIn(); //update, count and fadeIn
+      }
+      i++;
+    });
+  }, 2250);//2s
+});
+});
+  </script>
+  </head>
+  <body>
+    <div id="headerContainer">
+      <h1 id="headerText"></h1>
+    </div>
+    <div id="facts">
+      <ul>
+        <li>There is a malicious attack every 39 seconds
+        <li>95% of cybersecurity breaches are due to human error
+        <li>About 32% of comptuer users experience data loss each year
+        <li>The yearly virus damage to US businesses is more than 50 billion dollars
+        <li>You may think that data that is lost can always be recovered,<br>
+          but there is only a 50 percent of data recoveries to fail, whereas the cost of recovery is thousands of dollars
+      </ul>
+      <p id="source">Sources<br>
+        <a href="https://www.securitymagazine.com/articles/87787-hackers-attack-every-39-seconds">Malicious attack every 39 Seconds</a>
+        <br>
+        <a href="https://digitalcommons.kennesaw.edu/ccerp/2017/research/2/">Study on human error</a>
+        <br>
+        <a href="https://www.businessblogshub.com/2012/11/11-surprising-facts-about-data-loss/">Data loss facts</a>
+        <br>
+        <a href="https://www.bestbuy.com/site/geek-squad/geek-squad-data-recovery/pcmcat748300502324.c?id=pcmcat748300502324">Prices from bestbuy on data recovery</a>
+      </p>
+    <p style="margin-left:20%;margin-right:20%;"> The premise of this experience, is to give an example of how simple, one click of human error, can mentally shatter one's life in an instant.
+
+  </p>
+      <!-- <h1 id="fact1"></h1>
+      <h1 id="fact2"></h1> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="./CSS/page1.css">
+  <script>
+  document.addEventListener('keypress', addText)
+  text="Because as society integrates technology more into everyday life to the point where they are almost inseperable, especially given the popularity of cellular devices throughout our generation and the ease of access to information and computing power, it becomes much more important to provide proper safety measures and properly educate everyone on the basic risks and knowledge of how to conceal your information through encryption and other methods. Your information is more valuable than you'd expect, especially to someone trying to steal it";
+  function addText(){
+    document.getElementById('typingText').textContent = document.getElementById('typingText').textContent + text.substring(0,4);
+    text = text.substring(4);
+    if (text==''){
+      document.getElementById('typingText').innerHTML += "<br><br>-Anonymous";
+      document.removeEventListener('keypress', addText)
+      setTimeout(function(){
+        location.href="./page2.html";
+      }, 10000);
+    }
+  }
+  </script>
+  </head>
+  <body>
+    <h1 style="text-align:center;font-size:6em;">Start to type on your keyboard and read what is displayed</h1>
+    <h1 id="typingText"></h1>
+    <!-- <br>
+    <br>
+  -Anonymous -->
+  </body>
+</html>

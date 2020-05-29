@@ -1,0 +1,23 @@
+body{
+  margin:0;
+  background-color:skyblue;
+  text-align: center;
+}
+
+.headerText{
+  padding: 1.5em;
+
+  background-color: white;
+  font-size:3em;
+}
+
+.contButt {
+  padding:3em;
+
+  background-color: skyblue;
+  color:white;
+  font-size:3em;
+
+  border: black 0.1em solid;
+  border-radius: 3em;
+}

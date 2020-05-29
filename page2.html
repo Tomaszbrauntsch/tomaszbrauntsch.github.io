@@ -1,0 +1,28 @@
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="./CSS/page2.css">
+  <script>
+  function playAudio(){
+    var x = document.getElementById('myAudio');
+    x.autoplay = true;
+    x.load();
+    }
+  </script>
+  </head>
+  <body onload="playAudio()">
+    <audio id="myAudio" loop>
+      <source src="virusSpeech.mp3" type="audio/mpeg">
+        Your browser doesn't support
+    </audio>
+    <div class="boxText">
+    <h1>YOUR COMPUTER HAS BEEN INFECTED WITH ILLEGAL FILES AND YOU ARE GOING TO BE REPORTED TO THE FBI, CIA AND IRS
+      <br/>CLICK BUTTON BELOW TO REMOVE THE FOLLOWING VIRUSES FROM THIS PC:
+      <br/>Trojan.sys
+      <br/>WannaCRY.exe
+      <br/>H4CK3R.bat
+    </h1>
+    <button onclick="setTimeout(function(){location.href='./page3.html'}, 5000)">CLICK HERE FOR REMOVAL</button>
+    <h1 id="userWorking"></h1>
+  </div>
+  </body>
+</html>
