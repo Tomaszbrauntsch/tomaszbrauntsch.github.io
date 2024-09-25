@@ -1,0 +1,93 @@
+body{
+    margin: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #3b3b3b;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+#box1 {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    padding:2.5%;
+}
+
+#persontitle > b{
+    font-size: 1.5em;
+}
+
+#persontitle{
+    font-size: 1.5em;
+}
+
+#personinfo > p{
+    font-size:1.2em;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+#box2{
+    display:flex;
+    justify-content: space-between;
+    padding:2.5%;
+}
+
+#box2 > div {
+    font-size:1.1em;
+    width:5%;
+    text-align: text-top;
+    
+}
+#box2 > div > b {
+    font-size:1.2em;
+    
+}
+
+#box2 > div > div {
+    font-size:1.2em;
+}
+
+#box3 {
+    display: flex;
+    justify-content: space-between;
+    padding:2.5%;
+    font-size:1.2em;
+}
+
+#box3 > div {
+    justify-content: center;
+    width:5%;
+}
+
+#box4 {
+    display:flex;
+    justify-content: space-between;
+    padding:2.5%;
+    font-size:1.2em;
+}
+
+#box4 > div > table {
+    font-size:1.1em;
+    justify-content: center;
+} 
+
+td {
+    width:5%;
+}
+
+#box5 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5%;
+    font-size:1.2em;
+}
+
+#box5 > div {
+    justify-content: center;
+    width:0%;
+}
